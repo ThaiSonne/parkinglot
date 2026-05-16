@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="overview.css" />
+</head>
+<body>
+  <section class="hero">
+    <header class="hero-nav wrap">
+      <div class="brand">HCMUTE</div>
+      <nav>
+        <a href="overview.html" class="active">Overview</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="settings.html">Settings</a>
+        <a href="loginpage.html">Log out</a>
+      </nav>
+    </header>
+
+    <div class="hero-content wrap">
+      <p class="tag">HỆ THỐNG BÃI ĐỔ XE THÔNG MINH</p>
+    </div>
+
+    <div class="booking-bar wrap">
+      <div class="booking-item">
+        <label for="vehicleType">Loại xe</label>
+        <select id="vehicleType" class="booking-control">
+          <option>Xe ô tô</option>
+          <option>Xe máy</option>
+          <option>Xe đạp</option>
+        </select>
+      </div>
+      <div class="booking-item">
+        <label for="plateNumber">Biển số xe</label>
+        <input id="plateNumber" class="booking-control" type="text" placeholder="Nhập biển số xe" />
+      </div>
+      <button type="button">Search</button>
+    </div>
+  </section>
+
+  <main>
+    <section class="feature wrap">
+      <div class="feature-media">
+        <img src="tòa nhà trung tâm.jpg" alt="Feature" />
+        <button type="button">▶</button>
+      </div>
+      <div class="feature-text">
+        <h2>Giới thiệu </h2>
+        <p>Hệ thống bãi đổ xe thông minh là một dự án nhỏ được gom góp và ấp ủ ý tưởng từ 
+          nhóm sinh viên Trường Đại học Công Nghệ Kỹ thuật Thành phố Hồ Chí Minh.</p>
+        <a href="dashboard.html">See More</a>
+      </div>
+    </section>
+
+    <section class="gallery wrap">
+      <article class="card-large">
+        <img src="tòa nhà trung tâm.jpg" alt="Card 1" />
+        <div><h3><a href="dashboard.html">Vị trí xe</a></h3><p>Find my vehicle</p></div>
+      </article>
+      <article class="card-small">
+        <img src="logo hcmute.png" alt="Card 2" />
+        <div><h3><a href="dashboard.html">Lịch sử thanh toán</a></h3><p>Payment History</p></div>
+      </article>
+      <article class="card-small">
+        <img src="tòa nhà trung tâm.jpg" alt="Card 3" />
+        <div><h3><a href="dashboard.html">Hỗ trợ khẩn cấp</a></h3><p>Emergency Support</p></div>
+      </article>
+    </section>
+
+    <section class="reviews">
+      <div class="review-image">
+        <img src="tòa nhà trung tâm.jpg" alt="Reviews" />
+      </div>
+      <div class="review-text">
+        <h2>Our Top Reviews</h2>
+        <p>Không gian tối, chữ sáng và bố cục chia đôi giúp tăng chiều sâu thị giác như thiết kế mẫu.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

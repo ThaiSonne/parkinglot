@@ -1,0 +1,283 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  color: #f8f8f8;
+  background: #ececec;
+}
+
+.wrap {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  min-height: 620px;
+  background: linear-gradient(rgba(6, 16, 20, 0.45), rgba(6, 16, 20, 0.45)), url("tòa nhà trung tâm.jpg") center 20%/cover no-repeat;
+  padding-top: 16px;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  padding-bottom: 12px;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-nav nav {
+  display: flex;
+  gap: 18px;
+}
+
+.hero-nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+
+.hero-nav a.active,
+.hero-nav a:hover {
+  color: #ffcb3b;
+}
+
+.hero-content {
+  margin-top: 130px;
+  text-align: center;
+}
+
+.tag {
+  margin: 0;
+  color: #ffcb3b;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.desc {
+  margin: 10px auto 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+}
+
+.booking-bar {
+  position: absolute;
+  left: 50%;
+  bottom: -36px;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 180px;
+  align-items: stretch;
+  gap: 0;
+  width: min(980px, 92vw);
+  background: #fff;
+  color: #1f2937;
+  border-radius: 4px;
+  padding: 0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.booking-item {
+  min-height: 58px;
+  padding: 10px 14px;
+  border-right: 1px solid #eceff3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.booking-item:last-of-type {
+  border-right: 1px solid #eceff3;
+}
+
+.booking-item label {
+  display: block;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.booking-control {
+  margin-top: 6px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  color: #1f2937;
+  background: transparent;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+.booking-bar button {
+  border: none;
+  background: #e8ba29;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  min-height: 58px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+main {
+  padding: 100px 0 0;
+  color: #111827;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.feature-media {
+  position: relative;
+}
+
+.feature-media img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.feature-media button {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  border: none;
+  background: rgba(17, 24, 39, 0.72);
+  color: #fff;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.feature-text h2 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 3vw, 40px);
+  color: #1f2937;
+}
+
+.feature-text p {
+  margin: 0 0 16px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.feature-text a {
+  text-decoration: none;
+  background: #e8ba29;
+  color: #fff;
+  padding: 10px 18px;
+  display: inline-block;
+}
+
+.gallery {
+  margin-top: 46px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 20px;
+}
+
+.gallery article {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  min-height: 260px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery article div {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+.gallery h3 {
+  margin: 0;
+}
+
+.gallery h3 a {
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 80%;
+  display: inline-block;
+}
+
+.gallery p {
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+.reviews {
+  margin-top: 58px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.review-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.review-text {
+  background: #121923;
+  color: #f9fafb;
+  padding: 58px;
+  display: grid;
+  place-content: center;
+}
+
+.review-text h2 {
+  margin: 0 0 12px;
+  font-size: 36px;
+}
+
+.review-text p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.65;
+}
+
+@media (max-width: 960px) {
+  .booking-bar {
+    position: static;
+    transform: none;
+    margin: 34px auto 0;
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding-top: 42px;
+  }
+
+  .feature,
+  .gallery,
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+
+  .review-text {
+    padding: 30px 20px;
+  }
+}
