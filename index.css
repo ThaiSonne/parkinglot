@@ -131,3 +131,15 @@
   .login-left-panel { clip-path: none; min-height: 220px; }
   .login-right-panel { padding: 28px 20px 34px; }
 }
+
+/* Scroll Animation */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}

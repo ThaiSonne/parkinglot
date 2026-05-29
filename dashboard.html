@@ -3,27 +3,320 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
+  <title>Dashboard – Smart Parking</title>
   <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="topbar">
-    <h1>Dashboard</h1>
-    <nav>
-      <a href="overview.html">Overview</a>
-      <a href="dashboard.html" class="active">Dashboard</a>
-      <a href="settings.html">Settings</a>
-      <a href="loginpage.html">Log out</a>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo"><i class="fa-solid fa-square-parking"></i></div>
+      <span>Smart Parking</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <p class="nav-label">MAIN</p>
+      <a href="dashboard.html" class="nav-item active">
+        <span class="nav-icon"><i class="fa-solid fa-gauge-high"></i></span>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-table-cells-large"></i></span>
+        Sơ đồ bãi
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-receipt"></i></span>
+        Giao dịch
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-car"></i></span>
+        Phương tiện
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+        Báo cáo
+      </a>
+
+      <p class="nav-label">ACCOUNT</p>
+      <a href="#" class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-user"></i></span>
+        Hồ sơ
+      </a>
+      <a href="settings.html" class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+        Cài đặt
+      </a>
+      <a href="loginpage.html" class="nav-item">
+        <span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+        Đăng xuất
+      </a>
     </nav>
-  </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Bảng điều khiển</h2>
-      <p>Đây là trang Dashboard. Bạn có thể đặt biểu đồ, bảng dữ liệu tại đây.</p>
-    </section>
-  </main>
+    <div class="sidebar-help">
+      <i class="fa-solid fa-circle-question"></i>
+      <div>
+        <p>Cần hỗ trợ?</p>
+        <small>Xem tài liệu hướng dẫn</small>
+      </div>
+      <button>TÀI LIỆU</button>
+    </div>
+  </aside>
 
+  <!-- ===== MAIN ===== -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="breadcrumb">
+        <span>Trang chủ</span>
+        <i class="fa-solid fa-slash fa-xs"></i>
+        <strong>Dashboard</strong>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Tìm kiếm..." />
+        </div>
+        <a href="loginpage.html" class="topbar-link">
+          <i class="fa-solid fa-right-to-bracket"></i> Đăng nhập
+        </a>
+        <button class="topbar-icon-btn"><i class="fa-solid fa-gear"></i></button>
+        <button class="topbar-icon-btn"><i class="fa-solid fa-bell"></i></button>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <div class="content">
+
+      <!-- STATS CARDS -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-info">
+            <p class="stat-label">Doanh thu hôm nay</p>
+            <h3>2.500.000 đ</h3>
+            <small class="trend up"><i class="fa-solid fa-arrow-up"></i> +12% hôm qua</small>
+          </div>
+          <div class="stat-icon-box blue"><i class="fa-solid fa-wallet"></i></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info">
+            <p class="stat-label">Xe vào hôm nay</p>
+            <h3>1.240</h3>
+            <small class="trend up"><i class="fa-solid fa-arrow-up"></i> +4% hôm qua</small>
+          </div>
+          <div class="stat-icon-box cyan"><i class="fa-solid fa-car-side"></i></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info">
+            <p class="stat-label">Chỗ trống</p>
+            <h3>86</h3>
+            <small class="trend down"><i class="fa-solid fa-arrow-down"></i> -2% hôm qua</small>
+          </div>
+          <div class="stat-icon-box pink"><i class="fa-solid fa-square-parking"></i></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-info">
+            <p class="stat-label">Tổng chỗ đỗ</p>
+            <h3>500</h3>
+            <small class="trend up"><i class="fa-solid fa-arrow-up"></i> +5% tháng này</small>
+          </div>
+          <div class="stat-icon-box green"><i class="fa-solid fa-layer-group"></i></div>
+        </div>
+      </div>
+
+      <!-- FEATURE CARDS -->
+      <div class="feature-row">
+        <div class="feature-card light">
+          <div class="feature-text">
+            <span class="feature-tag">Quản lý thông minh</span>
+            <h2>Hệ thống bãi đỗ xe tự động</h2>
+            <p>Theo dõi trạng thái, doanh thu và phương tiện theo thời gian thực trên một giao diện duy nhất.</p>
+            <a href="#" class="feature-link">Xem thêm <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+          </div>
+          <div class="feature-emoji">🚗</div>
+        </div>
+        <div class="feature-card dark">
+          <div class="feature-text">
+            <h2>Phân tích & Báo cáo</h2>
+            <p>Báo cáo chi tiết giúp tối ưu vận hành bãi đỗ, dự đoán nhu cầu và tăng doanh thu hiệu quả.</p>
+            <a href="#" class="feature-link">Xem thêm <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHARTS ROW -->
+      <div class="charts-row">
+
+        <!-- Bar chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div>
+              <h4>Lượt xe theo giờ</h4>
+              <small class="trend up"><i class="fa-solid fa-arrow-up"></i> +18% so với tuần trước</small>
+            </div>
+          </div>
+          <div class="bar-chart">
+            <div class="bar-wrap"><div class="bar" style="height:40%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:65%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:50%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:80%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:60%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:95%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:70%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:55%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:45%"></div></div>
+            <div class="bar-wrap"><div class="bar" style="height:75%"></div></div>
+          </div>
+          <div class="mini-stats">
+            <div><strong>1.240</strong><span>Lượt xe</span></div>
+            <div><strong>320</strong><span>Thanh toán</span></div>
+            <div><strong>2.5tr</strong><span>Doanh thu</span></div>
+            <div><strong>3</strong><span>Sự cố</span></div>
+          </div>
+        </div>
+
+        <!-- Line chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div>
+              <h4>Doanh thu theo ngày</h4>
+              <small>Tháng 5 năm 2025</small>
+            </div>
+            <a href="#" class="badge-link">Xem tất cả</a>
+          </div>
+          <div class="line-chart-wrap">
+            <svg viewBox="0 0 300 110" preserveAspectRatio="none" class="line-svg">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15"/>
+                  <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- Area 1 -->
+              <path d="M0,85 C25,75 45,45 80,55 C115,65 130,25 165,32 C195,38 225,12 300,18 L300,110 L0,110 Z"
+                    fill="url(#g1)"/>
+              <!-- Line 1 -->
+              <path d="M0,85 C25,75 45,45 80,55 C115,65 130,25 165,32 C195,38 225,12 300,18"
+                    stroke="#2563eb" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Area 2 -->
+              <path d="M0,92 C40,88 65,78 95,83 C125,88 155,65 185,70 C215,75 250,55 300,48 L300,110 L0,110 Z"
+                    fill="url(#g2)"/>
+              <!-- Line 2 -->
+              <path d="M0,92 C40,88 65,78 95,83 C125,88 155,65 185,70 C215,75 250,55 300,48"
+                    stroke="#06b6d4" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="5 3"/>
+            </svg>
+            <div class="chart-legend">
+              <span class="legend-item blue">Doanh thu</span>
+              <span class="legend-item cyan">Lượt xe</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM ROW: table + events -->
+      <div class="bottom-row">
+
+        <!-- Table -->
+        <div class="table-card">
+          <div class="card-head">
+            <h4>Trạng thái khu vực</h4>
+            <a href="#" class="badge-link">Chi tiết</a>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Khu vực</th>
+                <th>Đang dùng</th>
+                <th>Trống</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tầng B1</td>
+                <td>120 / 150</td>
+                <td>30</td>
+                <td><span class="badge green">Bình thường</span></td>
+              </tr>
+              <tr>
+                <td>Tầng B2</td>
+                <td>95 / 150</td>
+                <td>55</td>
+                <td><span class="badge green">Bình thường</span></td>
+              </tr>
+              <tr>
+                <td>Tầng 1</td>
+                <td>148 / 150</td>
+                <td>2</td>
+                <td><span class="badge orange">Gần đầy</span></td>
+              </tr>
+              <tr>
+                <td>Khu A ngoài trời</td>
+                <td>50 / 50</td>
+                <td>0</td>
+                <td><span class="badge red">Đầy</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Events -->
+        <div class="events-card">
+          <div class="card-head">
+            <h4>Hoạt động gần đây</h4>
+          </div>
+          <ul class="event-list">
+            <li>
+              <span class="dot green"></span>
+              <div class="event-info">
+                <strong>Xe 51A-12345 vào</strong>
+                <small>Tầng B1 – 10:32</small>
+              </div>
+            </li>
+            <li>
+              <span class="dot blue"></span>
+              <div class="event-info">
+                <strong>Xe 59B-67890 ra</strong>
+                <small>Tầng B2 – 10:28</small>
+              </div>
+            </li>
+            <li>
+              <span class="dot red"></span>
+              <div class="event-info">
+                <strong>Cảnh báo: Tầng 1 gần đầy</strong>
+                <small>Hệ thống – 10:15</small>
+              </div>
+            </li>
+            <li>
+              <span class="dot green"></span>
+              <div class="event-info">
+                <strong>Xe 30E-11223 vào</strong>
+                <small>Khu A – 10:10</small>
+              </div>
+            </li>
+            <li>
+              <span class="dot cyan"></span>
+              <div class="event-info">
+                <strong>Thanh toán 45.000 đ</strong>
+                <small>Xe 77H-99001 – 10:05</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
